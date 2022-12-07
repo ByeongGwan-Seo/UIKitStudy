@@ -17,6 +17,7 @@
 		06F6820B29403D740047E624 /* WeatherAUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F6820A29403D740047E624 /* WeatherAUITests.swift */; };
 		06F6820D29403D740047E624 /* WeatherAUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F6820C29403D740047E624 /* WeatherAUITestsLaunchTests.swift */; };
 		06F6821A294061750047E624 /* WeatherInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F68219294061750047E624 /* WeatherInformation.swift */; };
+		06F6821C29407D220047E624 /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F6821B29407D220047E624 /* ErrorMessage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		06F6820A29403D740047E624 /* WeatherAUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAUITests.swift; sourceTree = "<group>"; };
 		06F6820C29403D740047E624 /* WeatherAUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		06F68219294061750047E624 /* WeatherInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherInformation.swift; sourceTree = "<group>"; };
+		06F6821B29407D220047E624 /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				06F68219294061750047E624 /* WeatherInformation.swift */,
 				06F681ED29403D730047E624 /* ViewController.swift */,
 				06F681EF29403D730047E624 /* Main.storyboard */,
+				06F6821B29407D220047E624 /* ErrorMessage.swift */,
 				06F681F229403D740047E624 /* Assets.xcassets */,
 				06F681F429403D740047E624 /* LaunchScreen.storyboard */,
 				06F681F729403D740047E624 /* Info.plist */,
@@ -263,6 +266,7 @@
 			files = (
 				06F681EE29403D730047E624 /* ViewController.swift in Sources */,
 				06F6821A294061750047E624 /* WeatherInformation.swift in Sources */,
+				06F6821C29407D220047E624 /* ErrorMessage.swift in Sources */,
 				06F681EA29403D730047E624 /* AppDelegate.swift in Sources */,
 				06F681EC29403D730047E624 /* SceneDelegate.swift in Sources */,
 			);

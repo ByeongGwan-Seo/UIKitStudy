@@ -39,16 +39,30 @@ class ViewController: UIViewController {
         self.maxTempLabel.text = "최고: \(Int(weatherInformation.temp.maxTemp - 273.15))℃"
     }
     
+    func showAlert(message: String) {
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Confirm", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     func getCurrentWeather(cityName: String) {
         guard let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=\(cityName)&appid=c68563d3baee514daeaf4a57cbef2a19") else { return }
         let session = URLSession(configuration: .default)
         session.dataTask(with: url) { [weak self] data, response, error in
+            let successRange = (200..<300)
             guard let data = data, error == nil else { return }
             let decoder = JSONDecoder()
-            guard let weatherInformation = try? decoder.decode(WeatherInformation.self, from: data) else { return }
-            DispatchQueue.main.async {
-                self?.weatherStackView.isHidden = false
-                self?.configureView(weatherInformation: weatherInformation)
+            if let response = response as? HTTPURLResponse, successRange.contains(response.statusCode) {
+                guard let weatherInformation = try? decoder.decode(WeatherInformation.self, from: data) else { return }
+                DispatchQueue.main.async {
+                    self?.weatherStackView.isHidden = false
+                    self?.configureView(weatherInformation: weatherInformation)
+                }
+            } else {
+                guard let errorMessage = try? decoder.decode(ErrorMessage.self, from: data) else { return }
+                DispatchQueue.main.async {
+                    self?.showAlert(message: errorMessage.message)
+                }
             }
         }.resume()
     }
