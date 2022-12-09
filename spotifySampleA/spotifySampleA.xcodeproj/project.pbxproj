@@ -9,13 +9,15 @@
 /* Begin PBXBuildFile section */
 		06F6826A2942C43C0047E624 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F682692942C43C0047E624 /* AppDelegate.swift */; };
 		06F6826C2942C43C0047E624 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F6826B2942C43C0047E624 /* SceneDelegate.swift */; };
-		06F6826E2942C43C0047E624 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F6826D2942C43C0047E624 /* ViewController.swift */; };
 		06F682712942C43C0047E624 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06F6826F2942C43C0047E624 /* Main.storyboard */; };
 		06F682732942C43E0047E624 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06F682722942C43E0047E624 /* Assets.xcassets */; };
 		06F682762942C43E0047E624 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06F682742942C43E0047E624 /* LaunchScreen.storyboard */; };
 		06F682812942C43E0047E624 /* spotifySampleATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F682802942C43E0047E624 /* spotifySampleATests.swift */; };
 		06F6828B2942C43E0047E624 /* spotifySampleAUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F6828A2942C43E0047E624 /* spotifySampleAUITests.swift */; };
 		06F6828D2942C43E0047E624 /* spotifySampleAUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F6828C2942C43E0047E624 /* spotifySampleAUITestsLaunchTests.swift */; };
+		06F6829A2942CD840047E624 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F682992942CD840047E624 /* LoginViewController.swift */; };
+		06F6829C2942E0E50047E624 /* EnterEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F6829B2942E0E50047E624 /* EnterEmailViewController.swift */; };
+		06F6829E294303710047E624 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F6829D294303710047E624 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +41,6 @@
 		06F682662942C43C0047E624 /* spotifySampleA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = spotifySampleA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06F682692942C43C0047E624 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		06F6826B2942C43C0047E624 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		06F6826D2942C43C0047E624 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		06F682702942C43C0047E624 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		06F682722942C43E0047E624 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		06F682752942C43E0047E624 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +50,9 @@
 		06F682862942C43E0047E624 /* spotifySampleAUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = spotifySampleAUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		06F6828A2942C43E0047E624 /* spotifySampleAUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spotifySampleAUITests.swift; sourceTree = "<group>"; };
 		06F6828C2942C43E0047E624 /* spotifySampleAUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spotifySampleAUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		06F682992942CD840047E624 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		06F6829B2942E0E50047E624 /* EnterEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterEmailViewController.swift; sourceTree = "<group>"; };
+		06F6829D294303710047E624 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +105,10 @@
 			children = (
 				06F682692942C43C0047E624 /* AppDelegate.swift */,
 				06F6826B2942C43C0047E624 /* SceneDelegate.swift */,
-				06F6826D2942C43C0047E624 /* ViewController.swift */,
 				06F6826F2942C43C0047E624 /* Main.storyboard */,
+				06F6829B2942E0E50047E624 /* EnterEmailViewController.swift */,
+				06F6829D294303710047E624 /* MainViewController.swift */,
+				06F682992942CD840047E624 /* LoginViewController.swift */,
 				06F682722942C43E0047E624 /* Assets.xcassets */,
 				06F682742942C43E0047E624 /* LaunchScreen.storyboard */,
 				06F682772942C43E0047E624 /* Info.plist */,
@@ -258,9 +264,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06F6826E2942C43C0047E624 /* ViewController.swift in Sources */,
+				06F6829A2942CD840047E624 /* LoginViewController.swift in Sources */,
 				06F6826A2942C43C0047E624 /* AppDelegate.swift in Sources */,
+				06F6829C2942E0E50047E624 /* EnterEmailViewController.swift in Sources */,
 				06F6826C2942C43C0047E624 /* SceneDelegate.swift in Sources */,
+				06F6829E294303710047E624 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
