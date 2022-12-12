@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class EnterEmailViewController: UIViewController {
 
@@ -38,6 +39,44 @@ class EnterEmailViewController: UIViewController {
     
     
     @IBAction func nextButtonTapped(_ sender: UIButton) {
+        //firebase email/pw authorization
+        let email = emailTextField.text ?? ""
+        let password = passwordTextField.text ?? ""
+        
+        //new user creation
+        Auth.auth().createUser(withEmail: email, password: password) { [weak self] authResult, error in
+            guard let self = self else { return }
+            if let error = error {
+                let code = (error as NSError).code
+                switch code {
+                case 17007: //account alread exist
+                    self.loginUser(withEmail: email, password: password)
+                default:
+                    self.errorMessageLabel.text = error.localizedDescription
+                }
+            } else {
+                self.showMainViewController()
+            }
+        }
+    }
+    
+    private func showMainViewController() {
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let mainViewController = storyboard.instantiateViewController(withIdentifier: "MainViewController")
+        mainViewController.modalPresentationStyle = .fullScreen
+        navigationController?.show(mainViewController, sender: nil)
+    }
+    
+    private func loginUser(withEmail email: String, password: String) {
+        Auth.auth().signIn(withEmail: email, password: password) { [weak self] _, error in
+            guard let self = self else { return }
+            
+            if let error = error {
+                self.errorMessageLabel.text = error.localizedDescription
+            } else {
+                self.showMainViewController()
+            }
+        }
     }
 }
 

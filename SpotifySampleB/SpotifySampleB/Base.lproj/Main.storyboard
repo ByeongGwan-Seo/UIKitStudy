@@ -222,7 +222,7 @@
         <!--Main View Controller-->
         <scene sceneID="Oxk-es-Fx9">
             <objects>
-                <viewController id="KsK-yY-8QT" customClass="MainViewController" customModule="SpotifySampleB" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" id="KsK-yY-8QT" customClass="MainViewController" customModule="SpotifySampleB" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="q5a-4g-t7P">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
