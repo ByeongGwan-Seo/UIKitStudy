@@ -6,10 +6,11 @@
 //
 
 import UIKit
+import GoogleSignIn
 
 class LoginViewController: UIViewController {
     @IBOutlet weak var emailLoginButton: UIButton!
-    @IBOutlet weak var googleLoginButton: UIButton!
+    @IBOutlet weak var googleLoginButton: GIDSignInButton!
     @IBOutlet weak var appleLoginButton: UIButton!
     
     
@@ -28,6 +29,9 @@ class LoginViewController: UIViewController {
         
         //Navigation Bar 숨기기
         navigationController?.navigationBar.isHidden = true
+        
+        //google sign in
+        GIDSignIn.sharedInstance().pre
     }
     
     
