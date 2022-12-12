@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0690A9082946FBC800488852 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0690A9072946FBC800488852 /* LoginViewController.swift */; };
+		0690A90A2946FF6900488852 /* EnterEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0690A9092946FF6800488852 /* EnterEmailViewController.swift */; };
+		0690A90C294705AD00488852 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0690A90B294705AD00488852 /* MainViewController.swift */; };
 		06F682AE2946D5FB0047E624 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F682AD2946D5FB0047E624 /* AppDelegate.swift */; };
 		06F682B02946D5FB0047E624 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F682AF2946D5FB0047E624 /* SceneDelegate.swift */; };
-		06F682B22946D5FB0047E624 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F682B12946D5FB0047E624 /* ViewController.swift */; };
 		06F682B52946D5FB0047E624 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06F682B32946D5FB0047E624 /* Main.storyboard */; };
 		06F682B72946D5FD0047E624 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06F682B62946D5FD0047E624 /* Assets.xcassets */; };
 		06F682BA2946D5FD0047E624 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06F682B82946D5FD0047E624 /* LaunchScreen.storyboard */; };
@@ -36,10 +38,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0690A9072946FBC800488852 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		0690A9092946FF6800488852 /* EnterEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterEmailViewController.swift; sourceTree = "<group>"; };
+		0690A90B294705AD00488852 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		06F682AA2946D5FB0047E624 /* SpotifySampleB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpotifySampleB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06F682AD2946D5FB0047E624 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		06F682AF2946D5FB0047E624 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		06F682B12946D5FB0047E624 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		06F682B42946D5FB0047E624 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		06F682B62946D5FD0047E624 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		06F682B92946D5FD0047E624 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -101,8 +105,10 @@
 			children = (
 				06F682AD2946D5FB0047E624 /* AppDelegate.swift */,
 				06F682AF2946D5FB0047E624 /* SceneDelegate.swift */,
-				06F682B12946D5FB0047E624 /* ViewController.swift */,
 				06F682B32946D5FB0047E624 /* Main.storyboard */,
+				0690A90B294705AD00488852 /* MainViewController.swift */,
+				0690A9092946FF6800488852 /* EnterEmailViewController.swift */,
+				0690A9072946FBC800488852 /* LoginViewController.swift */,
 				06F682B62946D5FD0047E624 /* Assets.xcassets */,
 				06F682B82946D5FD0047E624 /* LaunchScreen.storyboard */,
 				06F682BB2946D5FD0047E624 /* Info.plist */,
@@ -258,9 +264,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06F682B22946D5FB0047E624 /* ViewController.swift in Sources */,
+				0690A9082946FBC800488852 /* LoginViewController.swift in Sources */,
 				06F682AE2946D5FB0047E624 /* AppDelegate.swift in Sources */,
+				0690A90A2946FF6900488852 /* EnterEmailViewController.swift in Sources */,
 				06F682B02946D5FB0047E624 /* SceneDelegate.swift in Sources */,
+				0690A90C294705AD00488852 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
