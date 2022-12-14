@@ -19,6 +19,7 @@
 		0690A99D29495C8600488852 /* NoticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0690A99B29495C8600488852 /* NoticeViewController.swift */; };
 		0690A99E29495C8600488852 /* NoticeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0690A99C29495C8600488852 /* NoticeViewController.xib */; };
 		0690A9A029497A9600488852 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0690A99F29497A9600488852 /* GoogleService-Info.plist */; };
+		0690A9A229497CA100488852 /* RemoteConfigDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0690A9A129497CA100488852 /* RemoteConfigDefaults.plist */; };
 		C867030DB1BC2B046AE983E5 /* Pods_NoticePopupATests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ECEABF842D03520F28D6118 /* Pods_NoticePopupATests.framework */; };
 		DC01CA9371D9277C60F5D2BA /* Pods_NoticePopupA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC449C7C6A0B0A7FC0326A8E /* Pods_NoticePopupA.framework */; };
 		EFE5F662DB9B3CCBEA5FC494 /* Pods_NoticePopupA_NoticePopupAUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11B60A3686405375555F29CB /* Pods_NoticePopupA_NoticePopupAUITests.framework */; };
@@ -58,6 +59,7 @@
 		0690A99B29495C8600488852 /* NoticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeViewController.swift; sourceTree = "<group>"; };
 		0690A99C29495C8600488852 /* NoticeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoticeViewController.xib; sourceTree = "<group>"; };
 		0690A99F29497A9600488852 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0690A9A129497CA100488852 /* RemoteConfigDefaults.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = RemoteConfigDefaults.plist; sourceTree = "<group>"; };
 		10885945EC1FFB074FC84924 /* Pods-NoticePopupATests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoticePopupATests.debug.xcconfig"; path = "Target Support Files/Pods-NoticePopupATests/Pods-NoticePopupATests.debug.xcconfig"; sourceTree = "<group>"; };
 		11B60A3686405375555F29CB /* Pods_NoticePopupA_NoticePopupAUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NoticePopupA_NoticePopupAUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		31CDE86E87E6D05F32B267B4 /* Pods-NoticePopupA-NoticePopupAUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoticePopupA-NoticePopupAUITests.debug.xcconfig"; path = "Target Support Files/Pods-NoticePopupA-NoticePopupAUITests/Pods-NoticePopupA-NoticePopupAUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				0690A96B294959FC00488852 /* AppDelegate.swift */,
 				0690A96D294959FC00488852 /* SceneDelegate.swift */,
 				0690A96F294959FC00488852 /* ViewController.swift */,
+				0690A9A129497CA100488852 /* RemoteConfigDefaults.plist */,
 				0690A99B29495C8600488852 /* NoticeViewController.swift */,
 				0690A99C29495C8600488852 /* NoticeViewController.xib */,
 				0690A971294959FC00488852 /* Main.storyboard */,
@@ -174,7 +177,6 @@
 				10885945EC1FFB074FC84924 /* Pods-NoticePopupATests.debug.xcconfig */,
 				7F7CB616742D9D638AC47595 /* Pods-NoticePopupATests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -287,6 +289,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0690A9A229497CA100488852 /* RemoteConfigDefaults.plist in Resources */,
 				0690A978294959FE00488852 /* LaunchScreen.storyboard in Resources */,
 				0690A975294959FE00488852 /* Assets.xcassets in Resources */,
 				0690A9A029497A9600488852 /* GoogleService-Info.plist in Resources */,
