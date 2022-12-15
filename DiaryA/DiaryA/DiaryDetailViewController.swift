@@ -7,10 +7,6 @@
 
 import UIKit
 
-//protocol DiaryDetailViewDelegate: AnyObject {
-////    func didSelectDelete(indexPath: IndexPath)
-////    func didSelectStar(indexPath: IndexPath, isStar: Bool)
-//}
 
 class DiaryDetailViewController: UIViewController {
     

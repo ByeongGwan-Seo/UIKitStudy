@@ -154,13 +154,4 @@ extension ViewController: WriteDiaryViewDelegate {
     }
 }
 
-//extension ViewController: DiaryDetailViewDelegate {
-//    func didSelectDelete(indexPath: IndexPath) {
-//        self.diaryList.remove(at: indexPath.row)
-//        self.collectionView.deleteItems(at: [indexPath])
-//    }
-//    
-//    func didSelectStar(indexPath: IndexPath, isStar: Bool) {
-//        self.diaryList[indexPath.row].isStar = isStar
-//    }
-//}
+
