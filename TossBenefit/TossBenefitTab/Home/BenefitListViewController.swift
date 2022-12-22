@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Combine
 
 class BenefitListViewController: UIViewController {
 
@@ -20,13 +21,24 @@ class BenefitListViewController: UIViewController {
     }
     
     var datasource: UICollectionViewDiffableDataSource<Section, Item>!
+
+    var subscriptions = Set<AnyCancellable>()
     
-    var todaySectionItems: [AnyHashable] = TodaySectionItem(point: .default, today: .today).sectionItems
-    var otherSectionItems: [AnyHashable] = Benefit.others
+    let viewModel: BenefitListViewModel = BenefitListViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setupUI()
+        configureCollectionView()
+        bind()
+        viewModel.fetchItems()
+    }
+    
+    private func setupUI() {
+        navigationItem.title = "혜택"
+    }
+    
+    private func configureCollectionView() {
         datasource = UICollectionViewDiffableDataSource<Section, Item>(collectionView: collectionView, cellProvider: { collectionView, indexPath, item in
             
             guard let section = Section(rawValue: indexPath.section) else { return nil }
@@ -37,15 +49,54 @@ class BenefitListViewController: UIViewController {
         
         var snapshot = NSDiffableDataSourceSnapshot<Section, Item>()
         snapshot.appendSections([.today, .other])
-        snapshot.appendItems(todaySectionItems, toSection: .today)
-        snapshot.appendItems(otherSectionItems, toSection: .other)
+        snapshot.appendItems([], toSection: .today)
+        snapshot.appendItems([], toSection: .other)
         datasource.apply(snapshot)
         
         collectionView.collectionViewLayout = layout()
         collectionView.delegate = self
+    }
+    
+    private func bind() {
+        //MARK: output data
+        viewModel.$todaySectionItems
+            .receive(on: RunLoop.main)
+            .sink { items in
+                self.applySnapshot(items: items, section: .today)
+            }.store(in: &subscriptions)
         
+        viewModel.$otherSectionItems
+            .receive(on: RunLoop.main)
+            .sink { items in
+                self.applySnapshot(items: items, section: .other)
+            }.store(in: &subscriptions)
         
-        navigationItem.title = "혜택"
+        //MARK: user interaction
+        viewModel.benefitDidTapped
+            .receive(on: RunLoop.main)
+            .sink { benefit in
+                let storyboard = UIStoryboard(name: "ButtonBenefit", bundle: nil)
+                let viewController = storyboard.instantiateViewController(withIdentifier: "ButtonBenefitViewController") as? ButtonBenefitViewController
+                
+                viewController?.viewModel = ButtonBenefitViewModel(benefit: benefit)
+                self.navigationController?.pushViewController(viewController ?? UIViewController(), animated: true)
+            }.store(in: &subscriptions)
+        
+        viewModel.pointDidTapped
+            .receive(on: RunLoop.main)
+            .sink { point in
+                let storyboard = UIStoryboard(name: "MyPoint", bundle: nil)
+                let viewController = storyboard.instantiateViewController(withIdentifier: "MyPointViewController") as? MyPointViewController
+                
+                viewController?.viewModel = MyPointViewModel(point: point)
+                self.navigationController?.pushViewController(viewController ?? UIViewController(), animated: true)
+            }.store(in: &subscriptions)
+    }
+    
+    private func applySnapshot(items: [Item], section: Section) {
+        var snapshot = datasource.snapshot()
+        snapshot.appendItems(items, toSection: section)
+        datasource.apply(snapshot)
     }
     
     private func configureCell(for section: Section, item: Item, collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell? {
@@ -98,21 +149,11 @@ class BenefitListViewController: UIViewController {
 extension BenefitListViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let item = datasource.itemIdentifier(for: indexPath)
-        print("---> \(item)")
         
         if let benefit = item as? Benefit {
-            let storyboard = UIStoryboard(name: "ButtonBenefit", bundle: nil)
-            let viewController = storyboard.instantiateViewController(withIdentifier: "ButtonBenefitViewController") as? ButtonBenefitViewController
-            
-            viewController?.benefit = benefit
-            navigationController?.pushViewController(viewController ?? UIViewController(), animated: true)
-            
+            viewModel.benefitDidTapped.send(benefit)
         } else if let point = item as? MyPoint {
-            let storyboard = UIStoryboard(name: "MyPoint", bundle: nil)
-            let viewController = storyboard.instantiateViewController(withIdentifier: "MyPointViewController") as? MyPointViewController
-            
-            viewController?.point = point
-            navigationController?.pushViewController(viewController ?? UIViewController(), animated: true)
+            viewModel.pointDidTapped.send(point)
         } else { return }
     }
 }

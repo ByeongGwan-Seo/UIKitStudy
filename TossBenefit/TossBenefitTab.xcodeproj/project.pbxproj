@@ -20,6 +20,9 @@
 		06EE4CB92951A772008400A8 /* ButtonBenefitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EE4CB82951A772008400A8 /* ButtonBenefitViewController.swift */; };
 		06EE4CBE2951A878008400A8 /* BenefitDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EE4CBD2951A878008400A8 /* BenefitDetails.swift */; };
 		06EE4CC02951B69E008400A8 /* BenefitGuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EE4CBF2951B69E008400A8 /* BenefitGuideView.swift */; };
+		06EE4CC229541360008400A8 /* BenefitListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EE4CC129541360008400A8 /* BenefitListViewModel.swift */; };
+		06EE4CC429541A31008400A8 /* MyPointViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EE4CC329541A31008400A8 /* MyPointViewModel.swift */; };
+		06EE4CC629542DBA008400A8 /* ButtonBenefitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EE4CC529542DBA008400A8 /* ButtonBenefitViewModel.swift */; };
 		94BD3356285D5C9E008DA3B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BD3355285D5C9E008DA3B7 /* AppDelegate.swift */; };
 		94BD3358285D5C9E008DA3B7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BD3357285D5C9E008DA3B7 /* SceneDelegate.swift */; };
 		94BD335D285D5C9E008DA3B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94BD335B285D5C9E008DA3B7 /* Main.storyboard */; };
@@ -61,6 +64,9 @@
 		06EE4CB82951A772008400A8 /* ButtonBenefitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonBenefitViewController.swift; sourceTree = "<group>"; };
 		06EE4CBD2951A878008400A8 /* BenefitDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenefitDetails.swift; sourceTree = "<group>"; };
 		06EE4CBF2951B69E008400A8 /* BenefitGuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenefitGuideView.swift; sourceTree = "<group>"; };
+		06EE4CC129541360008400A8 /* BenefitListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenefitListViewModel.swift; sourceTree = "<group>"; };
+		06EE4CC329541A31008400A8 /* MyPointViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPointViewModel.swift; sourceTree = "<group>"; };
+		06EE4CC529542DBA008400A8 /* ButtonBenefitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonBenefitViewModel.swift; sourceTree = "<group>"; };
 		94BD3352285D5C9E008DA3B7 /* TossBenefitTab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TossBenefitTab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94BD3355285D5C9E008DA3B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94BD3357285D5C9E008DA3B7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +125,7 @@
 				0690AB582950648200488852 /* MyPointCell.swift */,
 				0690AB5C295064AB00488852 /* BenefitCell.swift */,
 				0690AB5A2950649900488852 /* TodayBenefitCell.swift */,
+				06EE4CC129541360008400A8 /* BenefitListViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -128,6 +135,7 @@
 			children = (
 				0690AB60295194DF00488852 /* MyPoint.storyboard */,
 				0690AB622951950400488852 /* MyPointViewController.swift */,
+				06EE4CC329541A31008400A8 /* MyPointViewModel.swift */,
 			);
 			path = MyPoint;
 			sourceTree = "<group>";
@@ -137,6 +145,7 @@
 			children = (
 				06EE4CB62951A762008400A8 /* ButtonBenefit.storyboard */,
 				06EE4CB82951A772008400A8 /* ButtonBenefitViewController.swift */,
+				06EE4CC529542DBA008400A8 /* ButtonBenefitViewModel.swift */,
 				06EE4CBF2951B69E008400A8 /* BenefitGuideView.swift */,
 			);
 			path = Benefit;
@@ -336,8 +345,11 @@
 				0690AB5B2950649900488852 /* TodayBenefitCell.swift in Sources */,
 				06EE4CB92951A772008400A8 /* ButtonBenefitViewController.swift in Sources */,
 				94BD3356285D5C9E008DA3B7 /* AppDelegate.swift in Sources */,
+				06EE4CC229541360008400A8 /* BenefitListViewModel.swift in Sources */,
 				0690AB592950648200488852 /* MyPointCell.swift in Sources */,
+				06EE4CC429541A31008400A8 /* MyPointViewModel.swift in Sources */,
 				94BD3358285D5C9E008DA3B7 /* SceneDelegate.swift in Sources */,
+				06EE4CC629542DBA008400A8 /* ButtonBenefitViewModel.swift in Sources */,
 				06EE4CBE2951A878008400A8 /* BenefitDetails.swift in Sources */,
 				0690AB632951950400488852 /* MyPointViewController.swift in Sources */,
 				06EE4CC02951B69E008400A8 /* BenefitGuideView.swift in Sources */,

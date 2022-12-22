@@ -6,23 +6,22 @@
 //
 
 import UIKit
+import Combine
 
 class ButtonBenefitViewController: UIViewController {
 
     @IBOutlet weak var ctaButton: UIButton!
     @IBOutlet weak var vStackView: UIStackView!
     
-    var benefit: Benefit = .today
-    var benefitDetails: BenefitDetails = .default
+    var viewModel: ButtonBenefitViewModel!
+    var subscriptions = Set<AnyCancellable>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupUI()
+        bind()
+//        viewModel.fetchDetails()
         
-        addGuides()
-        
-        ctaButton.setTitle(benefit.ctaTitle, for: .normal)
     }
     
     private func setupUI() {
@@ -31,8 +30,25 @@ class ButtonBenefitViewController: UIViewController {
         navigationItem.largeTitleDisplayMode = .never
     }
     
-    private func addGuides() {
-        let guideViews: [BenefitGuideView] = benefitDetails.guides.map { guide in
+    private func bind() {
+        //MARK: output: data
+        
+        viewModel.$benefit
+            .receive(on: RunLoop.main)
+            .sink { benefit in
+                self.ctaButton.setTitle(benefit.ctaTitle, for: .normal)
+            }.store(in: &subscriptions)
+        
+        viewModel.$benefitDetails
+            .compactMap { $0 }
+            .receive(on: RunLoop.main)
+            .sink { details in
+                self.addGuides(details: details)
+            }.store(in: &subscriptions)
+    }
+    
+    private func addGuides(details: BenefitDetails) {
+        let guideViews: [BenefitGuideView] = details.guides.map { guide in
             let guideView = BenefitGuideView(frame: .zero)
             guideView.icon.image = UIImage(systemName: guide.iconName)
             guideView.title.text = guide.guide
