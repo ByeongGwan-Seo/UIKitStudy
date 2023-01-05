@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FloatButton" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WeatherBG_Moon" translatesAutoresizingMaskIntoConstraints="NO" id="Jfs-4N-YeF">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5yP-M2-19f">
+                                <rect key="frame" x="293" y="718" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="n6P-YF-Tsg"/>
+                                    <constraint firstAttribute="height" constant="60" id="nJR-tQ-L2o"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button" image="add_icon_green.png"/>
+                                <connections>
+                                    <segue destination="uzt-g7-KHz" kind="show" identifier="showPopup" id="bis-J2-Dvb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5yP-M2-19f" secondAttribute="trailing" constant="40" id="F7E-8t-NpM"/>
+                            <constraint firstAttribute="bottom" secondItem="Jfs-4N-YeF" secondAttribute="bottom" id="HdJ-ma-gvn"/>
+                            <constraint firstItem="Jfs-4N-YeF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="I9y-8S-RyO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5yP-M2-19f" secondAttribute="bottom" constant="40" id="sEU-Sy-b9f"/>
+                            <constraint firstItem="Jfs-4N-YeF" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="vPH-So-Qu3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Jfs-4N-YeF" secondAttribute="trailing" id="zmp-lO-bUg"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="50" y="4"/>
+        </scene>
+        <!--Floating Button List View Controller-->
+        <scene sceneID="z1A-Re-3tp">
+            <objects>
+                <viewController storyboardIdentifier="FloatingButtonListViewController" id="uzt-g7-KHz" customClass="FloatingButtonListViewController" customModule="FloatButton" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cK1-Jf-5c7">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QjT-wV-924">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="IKB-Oj-EDC">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="regular"/>
+                            </visualEffectView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w2K-D7-ZQJ">
+                                <rect key="frame" x="298" y="448" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="L0a-52-9am"/>
+                                    <constraint firstAttribute="width" constant="50" id="og9-jT-QYS"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button" image="food3.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UxI-2E-4tj">
+                                <rect key="frame" x="298" y="528" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="cdU-2a-yM2"/>
+                                    <constraint firstAttribute="height" constant="50" id="gc8-oo-08R"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button" image="food2.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OwW-qb-0An">
+                                <rect key="frame" x="298" y="608" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="9CC-n3-qcb"/>
+                                    <constraint firstAttribute="width" constant="50" id="B25-mx-c5K"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button" image="food1.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0lh-So-LAK">
+                                <rect key="frame" x="293" y="683" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="6md-9e-SAA"/>
+                                    <constraint firstAttribute="height" constant="60" id="dS8-FV-q3u"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button" image="add_icon_green.png"/>
+                                <connections>
+                                    <action selector="dismissFloating:" destination="uzt-g7-KHz" eventType="touchUpInside" id="aRf-f0-nDM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Xgn-pK-CL8"/>
+                        <constraints>
+                            <constraint firstItem="Xgn-pK-CL8" firstAttribute="bottom" secondItem="0lh-So-LAK" secondAttribute="bottom" constant="40" id="4un-RD-Nbu"/>
+                            <constraint firstAttribute="bottom" secondItem="QjT-wV-924" secondAttribute="bottom" id="5wi-o8-JNh"/>
+                            <constraint firstItem="0lh-So-LAK" firstAttribute="centerY" secondItem="OwW-qb-0An" secondAttribute="centerY" constant="80" id="6an-bM-oZm"/>
+                            <constraint firstAttribute="trailing" secondItem="QjT-wV-924" secondAttribute="trailing" id="IAa-Dn-YKc"/>
+                            <constraint firstItem="0lh-So-LAK" firstAttribute="centerX" secondItem="UxI-2E-4tj" secondAttribute="centerX" id="OSZ-V2-b5S"/>
+                            <constraint firstItem="0lh-So-LAK" firstAttribute="centerY" secondItem="w2K-D7-ZQJ" secondAttribute="centerY" constant="240" id="QYV-ne-ePK"/>
+                            <constraint firstItem="QjT-wV-924" firstAttribute="leading" secondItem="cK1-Jf-5c7" secondAttribute="leading" id="Vfw-81-dvL"/>
+                            <constraint firstItem="Xgn-pK-CL8" firstAttribute="trailing" secondItem="0lh-So-LAK" secondAttribute="trailing" constant="40" id="cBn-Cf-NpP"/>
+                            <constraint firstItem="QjT-wV-924" firstAttribute="top" secondItem="cK1-Jf-5c7" secondAttribute="top" id="gWQ-06-4cn"/>
+                            <constraint firstItem="0lh-So-LAK" firstAttribute="centerX" secondItem="OwW-qb-0An" secondAttribute="centerX" id="hXS-sp-qSq"/>
+                            <constraint firstItem="0lh-So-LAK" firstAttribute="centerX" secondItem="w2K-D7-ZQJ" secondAttribute="centerX" id="uXq-01-Bf9"/>
+                            <constraint firstItem="0lh-So-LAK" firstAttribute="centerY" secondItem="UxI-2E-4tj" secondAttribute="centerY" constant="160" id="vP5-kM-hJC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="gTX-Of-jCi"/>
+                    <connections>
+                        <outlet property="btn1CenterY" destination="6an-bM-oZm" id="MrX-jb-OAa"/>
+                        <outlet property="btn2CenterY" destination="vP5-kM-hJC" id="tH9-1C-45K"/>
+                        <outlet property="btn3CenterY" destination="QYV-ne-ePK" id="6V3-3V-wrU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z5y-zt-Px1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="826.71755725190837" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="WeatherBG_Moon" width="375" height="667"/>
+        <image name="add_icon_green.png" width="385.60000610351562" height="384.79998779296875"/>
+        <image name="food1.png" width="256" height="256"/>
+        <image name="food2.png" width="256" height="256"/>
+        <image name="food3.png" width="256" height="256"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
