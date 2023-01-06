@@ -9,10 +9,13 @@ import UIKit
 
 class PopupViewController: UIViewController {
 
+    
+    @IBOutlet weak var popupView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        popupView.layer.cornerRadius = 25
     }
     
 
