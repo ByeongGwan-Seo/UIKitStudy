@@ -9,6 +9,8 @@ import UIKit
 
 class YourCell: UITableViewCell {
 
+    @IBOutlet weak var yourTextCell: UITextView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -71,6 +71,7 @@
                         <outlet property="chatTableView" destination="ItM-cH-cua" id="zqB-IC-3ZV"/>
                         <outlet property="inputViewBottom" destination="96a-dT-bXa" id="yRE-RU-Lc2"/>
                         <outlet property="userInputView" destination="dYD-GS-qwa" id="Y3N-o3-BOV"/>
+                        <outlet property="userInputViewHeight" destination="Duh-Ow-n9s" id="cVx-Am-i9T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

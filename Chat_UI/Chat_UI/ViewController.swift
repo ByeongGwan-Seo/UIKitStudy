@@ -13,12 +13,19 @@ class ViewController: UIViewController {
         didSet {
             chatTableView.delegate = self
             chatTableView.dataSource = self
+            chatTableView.separatorStyle = .none
         }
     }
     
     var chatDatas = [String]()
     
-    @IBOutlet weak var userInputView: UITextView!
+    @IBOutlet weak var userInputView: UITextView! {
+        didSet {
+            userInputView.delegate = self
+        }
+    }
+    
+    @IBOutlet weak var userInputViewHeight: NSLayoutConstraint!
     @IBOutlet weak var inputViewBottom: NSLayoutConstraint!
     
     override func viewDidLoad() {
@@ -57,7 +64,12 @@ class ViewController: UIViewController {
     }
 
     @IBAction func sendString(_ sender: UIButton) {
+        chatDatas.append(userInputView.text)
+        userInputView.text = ""
+        chatTableView.reloadData()
         
+        let lastIndexPath = IndexPath(row: chatDatas.count - 1, section: 0)
+        chatTableView.scrollToRow(at: lastIndexPath, at: UITableView.ScrollPosition.bottom, animated: true)
     }
 }
 
@@ -74,13 +86,29 @@ extension ViewController: UITableViewDataSource {
         
         if indexPath.row % 2 == 0 {
             guard let myCell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath) as? MyCell else { return UITableViewCell() }
-            
+            myCell.myTextCell.text = chatDatas[indexPath.row]
+            myCell.selectionStyle = .none
             return myCell
             
         } else {
             guard let yourCell = tableView.dequeueReusableCell(withIdentifier: "yourCell", for: indexPath) as? YourCell else { return UITableViewCell()}
+            yourCell.yourTextCell.text = chatDatas[indexPath.row]
+            yourCell.selectionStyle = .none
             
             return yourCell
         }
+    }
+}
+
+extension ViewController: UITextViewDelegate {
+    func textViewDidChange(_ textView: UITextView) {
+        if textView.contentSize.height <= 40 {
+            userInputViewHeight.constant = 40
+        } else if textView.contentSize.height >= 100 {
+            userInputViewHeight.constant = 100
+        } else {
+            userInputViewHeight.constant = textView.contentSize.height
+        }
+        
     }
 }

@@ -21,7 +21,7 @@
                         <rect key="frame" x="373.66666666666669" y="10" width="82.333333333333314" height="26"/>
                         <rect key="contentStretch" x="0.5" y="0.5" width="0.0" height="0.0"/>
                     </imageView>
-                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="755" verticalHuggingPriority="755" scrollEnabled="NO" text="ㅁㄴㅇㄹ " textAlignment="right" translatesAutoresizingMaskIntoConstraints="NO" id="JgG-hL-H7F">
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="755" verticalHuggingPriority="755" scrollEnabled="NO" text="ㅁㄴㅇㄹ " textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="JgG-hL-H7F">
                         <rect key="frame" x="373.66666666666669" y="10" width="62.333333333333314" height="26"/>
                         <color key="textColor" systemColor="labelColor"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -48,6 +48,9 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="myTextCell" destination="JgG-hL-H7F" id="cxq-AE-eoU"/>
+            </connections>
             <point key="canvasLocation" x="166.41221374045801" y="-103.52112676056339"/>
         </tableViewCell>
     </objects>
