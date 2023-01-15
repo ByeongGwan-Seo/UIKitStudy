@@ -22,6 +22,5 @@ class OnboardingItemViewController: UIViewController {
         topImageView.image = topImage
         mainTitleLabel.text = mainText
         descriptionLabel.text = subText
-        
     }
 }
